@@ -12,11 +12,13 @@
       font-size: 22px;
       display: flex;
       flex-direction: column;
+      align-items: center;
     }
 
     .menu-bar {
       background-color: #000;
       color: white;
+      width: 100%;
     }
 
     .menu-bar header {
@@ -76,23 +78,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
 
-    .recently-added, .tv-shows {
-      display: flex;
-      overflow-x: auto;
-      padding: 20px;
+    .grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 30px;
+      padding: 20px;
+      width: 100%;
     }
 
     .movie, .tv-show {
       text-align: center;
-      flex: 0 0 auto;
     }
 
     .movie img, .tv-show img {
-      width: 350px;
-      height: 500px;
+      width: 100%;
+      height: 400px;
       object-fit: cover;
     }
 
@@ -121,7 +124,6 @@
           <li><a href="Anime.html">Anime</a></li>
           <li><a href="Games and Apps.html">Games & Apps</a></li>
           <li><a href="Collections.html">Collections</a></li>
-          <li><a href="feedback.html">Feedback</a></li>
         </ul>
       </header>
     </div>
@@ -138,7 +140,7 @@
     </div>
 
     <h1>Recently Added</h1>
-    <section class="recently-added">
+    <section class="grid-section recently-added">
       <div class="movie">
         <img src="365 DNI.jpg" alt="365 DNI">
         <h2>365 DNI</h2>
@@ -172,7 +174,7 @@
     </section>
 
     <h1>Films & TV Shows</h1>
-    <section class="tv-shows">
+    <section class="grid-section tv-shows">
       <div class="tv-show">
         <img src="Saltburn 2023.jpg" alt="Saltburn">
         <h2>Saltburn</h2>
