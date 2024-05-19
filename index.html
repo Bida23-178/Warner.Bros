@@ -9,7 +9,9 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      font-size: 22px; 
+      font-size: 22px;
+      display: flex;
+      flex-direction: column;
     }
 
     .menu-bar {
@@ -24,7 +26,7 @@
     }
 
     .logo {
-      height: 70px; 
+      height: 70px;
       margin-right: 20px;
     }
 
@@ -47,7 +49,7 @@
     }
 
     .search-bar {
-      margin: 20px 0;
+      margin: 20px;
       display: flex;
       justify-content: center;
     }
@@ -57,7 +59,7 @@
       width: 300px;
       border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 22px; 
+      font-size: 22px;
     }
 
     .search-bar button {
@@ -67,30 +69,37 @@
       color: white;
       border-radius: 5px;
       margin-left: 10px;
-      font-size: 22px; 
+      font-size: 22px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .recently-added, .tv-shows {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 30px;
+      display: flex;
+      overflow-x: auto;
       padding: 20px;
+      gap: 30px;
     }
 
     .movie, .tv-show {
       text-align: center;
+      flex: 0 0 auto;
     }
 
     .movie img, .tv-show img {
-      width: 100%;
-      height: 700px;
+      width: 350px;
+      height: 500px;
       object-fit: cover;
     }
 
     h1 {
       margin: 20px;
       text-align: center;
-      font-size: 42px; 
+      font-size: 42px;
     }
 
     p {
@@ -102,7 +111,7 @@
 </head>
 <body>
   <nav>
-    <div class="menu-bar"> 
+    <div class="menu-bar">
       <header>
         <img src="Warner bros.png" alt="Warner Bros Logo" class="logo">
         <ul class="menus">
@@ -113,80 +122,82 @@
           <li><a href="Games and Apps.html">Games & Apps</a></li>
           <li><a href="Collections.html">Collections</a></li>
           <li><a href="feedback.html">Feedback</a></li>
-        </ul> 
+        </ul>
       </header>
     </div>
   </nav>
-  <h1>Warner Bros Movies!</h1>
-  <p>Discover a variety of entertainment options & enjoy watching the best offerings across different media types.</p>
+  <div class="content">
+    <h1>Warner Bros Movies!</h1>
+    <p>Discover a variety of entertainment options & enjoy watching the best offerings across different media types.</p>
 
-  <div class="search-bar">
-    <form action="#" method="GET">
-      <input type="text" name="search" placeholder="Search...">
-      <button type="submit">Search</button>
-    </form>
+    <div class="search-bar">
+      <form action="#" method="GET">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <h1>Recently Added</h1>
+    <section class="recently-added">
+      <div class="movie">
+        <img src="365 DNI.jpg" alt="365 DNI">
+        <h2>365 DNI</h2>
+        <p>Drama</p>
+      </div>
+      <div class="movie">
+        <img src="Project Almanac (2014).jpg" alt="Project Almanac">
+        <h2>Project Almanac</h2>
+        <p>Sci-fi, Adventure</p>
+      </div>
+      <div class="movie">
+        <img src="Ghosted.jpg" alt="Ghosted">
+        <h2>Ghosted</h2>
+        <p>Action, Drama</p>
+      </div>
+      <div class="movie">
+        <img src="Avatar.jpg" alt="Avatar">
+        <h2>Avatar</h2>
+        <p>Adventure, Sci-fi, Action</p>
+      </div>
+      <div class="movie">
+        <img src="The Mummy.jpg" alt="The Mummy">
+        <h2>The Mummy</h2>
+        <p>Action, Adventure, Sci-fi</p>
+      </div>
+      <div class="movie">
+        <img src="John Wick_ Chapter 4.jpg" alt="John Wick: Chapter 4">
+        <h2>John Wick: Chapter 4</h2>
+        <p>Thriller, Action</p>
+      </div>
+    </section>
+
+    <h1>Films & TV Shows</h1>
+    <section class="tv-shows">
+      <div class="tv-show">
+        <img src="Saltburn 2023.jpg" alt="Saltburn">
+        <h2>Saltburn</h2>
+      </div>
+      <div class="tv-show">
+        <img src="Book IV force.jpg" alt="Power Book: IV Force">
+        <h2>Power Book: IV Force</h2>
+      </div>
+      <div class="tv-show">
+        <img src="Bel-air.jpg" alt="Bel-air">
+        <h2>Bel-air</h2>
+      </div>
+      <div class="tv-show">
+        <img src="Tell me a story.jpg" alt="Tell me a story">
+        <h2>Tell me a story</h2>
+      </div>
+      <div class="tv-show">
+        <img src="Hacker.jpg" alt="Hacker">
+        <h2>Hacker</h2>
+      </div>
+      <div class="tv-show">
+        <img src="Upgraded.jpg" alt="Upgraded">
+        <h2>Upgraded</h2>
+      </div>
+    </section>
   </div>
-
-  <h1>Recently Added</h1>
-  <section class="recently-added">
-    <div class="movie">
-      <img src="365 DNI.jpg" alt="365 DNI">
-      <h2>365 DNI</h2>
-      <p>Drama</p>
-    </div>
-    <div class="movie">
-      <img src="Project Almanac (2014).jpg" alt="Project Almanac">
-      <h2>Project Almanac</h2>
-      <p>Sci-fi, Adventure</p>
-    </div>
-    <div class="movie">
-      <img src="Ghosted.jpg" alt="Ghosted">
-      <h2>Ghosted</h2>
-      <p>Action, Drama</p>
-    </div>
-    <div class="movie">
-      <img src="Avatar.jpg" alt="Avatar">
-      <h2>Avatar</h2>
-      <p>Adventure, Sci-fi, Action</p>
-    </div>
-    <div class="movie">
-      <img src="The Mummy.jpg" alt="The Mummy">
-      <h2>The Mummy</h2>
-      <p>Action, Adventure, Sci-fi</p>
-    </div>
-    <div class="movie">
-      <img src="John Wick_ Chapter 4.jpg" alt="John Wick: Chapter 4">
-      <h2>John Wick: Chapter 4</h2>
-      <p>Thriller, Action</p>
-    </div>
-  </section>
-
-  <h1>Films & TV Shows</h1>
-  <section class="tv-shows">
-    <div class="tv-show">
-      <img src="Saltburn 2023.jpg" alt="Saltburn">
-      <h2>Saltburn</h2>
-    </div>
-    <div class="tv-show">
-      <img src="Book IV force.jpg" alt="Power Book: IV Force">
-      <h2>Power Book: IV Force</h2>
-    </div>
-    <div class="tv-show">
-      <img src="Bel-air.jpg" alt="Bel-air">
-      <h2>Bel-air</h2>
-    </div>
-    <div class="tv-show">
-      <img src="Tell me a story.jpg" alt="Tell me a story">
-      <h2>Tell me a story</h2>
-    </div>
-    <div class="tv-show">
-      <img src="Hacker.jpg" alt="Hacker">
-      <h2>Hacker</h2>
-    </div>
-    <div class="tv-show">
-      <img src="Upgraded.jpg" alt="Upgraded">
-      <h2>Upgraded</h2>
-    </div>
-  </section>
 </body>
 </html>
